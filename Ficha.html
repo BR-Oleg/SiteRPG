@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Ficha de Personagem</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif; 
+      margin: 20px;
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      color: #2F4F4F;
+    }
+    fieldset {
+      border: 2px solid #ccc;
+      margin-bottom: 20px;
+      padding: 10px;
+    }
+    label {
+      display: inline-block;
+      width: 100px;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      margin-bottom: 10px;
+      padding: 5px;
+      width: 70%;
+    }
+    .small-input {
+      width: 50px;
+      text-align: center;
+    }
+    .section-title {
+      margin-top: 30px;
+      color: #444;
+      text-decoration: underline;
+    }
+    .example-box {
+      background-color: #f9f9f9;
+      border: 1px dashed #999;
+      padding: 10px;
+      margin-top: 10px;
+    }
+    .btn {
+      background: #2F4F4F;
+      color: #fff;
+      padding: 10px 15px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    .btn:hover {
+      background: #3b6060;
+    }
+    .note {
+      color: #800000;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Ficha de Personagem</h1>
+
+<!-- ===================== FICHA VAZIA (FORMULÁRIO) ===================== -->
+<form id="characterForm">
+  <fieldset>
+    <legend><strong>Informações Básicas</strong></legend>
+    <p>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" placeholder="Ex: John Miller" required>
+    </p>
+    <p>
+      <label for="idade">Idade:</label>
+      <input type="number" id="idade" name="idade" placeholder="Ex: 28">
+    </p>
+    <p>
+      <label for="medo">Medo:</label>
+      <textarea id="medo" name="medo" rows="2" placeholder="Ex: Medo de perder aliados..."></textarea>
+    </p>
+    <p>
+      <label for="motivacao">Motivação:</label>
+      <textarea id="motivacao" name="motivacao" rows="2" placeholder="Ex: Proteger seu pelotão..."></textarea>
+    </p>
+    <p>
+      <label for="falhas">Falhas:</label>
+      <textarea id="falhas" name="falhas" rows="2" placeholder="Ex: Arrogância, teimosia..."></textarea>
+    </p>
+  </fieldset>
+
+  <fieldset>
+    <legend><strong>Status (Atributos)</strong></legend>
+    <p>
+      <label for="cerebros">Cérebros:</label>
+      <input type="text" class="small-input" id="cerebros" name="cerebros" placeholder="Ex: d10">
+    </p>
+    <p>
+      <label for="musculo">Músculo:</label>
+      <input type="text" class="small-input" id="musculo" name="musculo" placeholder="Ex: d8">
+    </p>
+    <p>
+      <label for="luta">Luta:</label>
+      <input type="text" class="small-input" id="luta" name="luta" placeholder="Ex: d12">
+    </p>
+    <p>
+      <label for="fuga">Fuga:</label>
+      <input type="text" class="small-input" id="fuga" name="fuga" placeholder="Ex: d6">
+    </p>
+    <p>
+      <label for="charme">Charme:</label>
+      <input type="text" class="small-input" id="charme" name="charme" placeholder="Ex: d4">
+    </p>
+    <p>
+      <label for="garra">Garra:</label>
+      <input type="text" class="small-input" id="garra" name="garra" placeholder="Ex: d20">
+    </p>
+  </fieldset>
+
+  <fieldset>
+    <legend><strong>Habilidades de Classe e Gerais</strong></legend>
+    <p>
+      <label for="habilidades">Habilidades:</label><br>
+      <textarea id="habilidades" name="habilidades" rows="4" placeholder="Liste aqui suas habilidades..."></textarea>
+    </p>
+  </fieldset>
+
+  <fieldset>
+    <legend><strong>Tecnologia 2377 (Opcional)</strong></legend>
+    <p>
+      <label for="tecnologia">Vantagem Oculta:</label><br>
+      <textarea id="tecnologia" name="tecnologia" rows="3" placeholder="Ex: Sistema de Mira Neural..."></textarea>
+    </p>
+  </fieldset>
+
+  <p><button type="button" class="btn" onclick="generateHTML()">Gerar Ficha</button></p>
+</form>
+
+<hr/>
+
+<!-- ===================== EXEMPLO DE FICHA PREENCHIDA ===================== -->
+<h2 class="section-title">Exemplo de Ficha: General Jorvik</h2>
+<div class="example-box">
+  <p><strong>Nome:</strong> Jorvik Helskaar</p>
+  <p><strong>Idade:</strong> 57</p>
+  <p><strong>Medo:</strong> Perder o controle da situação e falhar com sua tropa</p>
+  <p><strong>Motivação:</strong> Vingar-se de um rival e garantir supremacia na guerra</p>
+  <p><strong>Falhas:</strong> Extremamente rígido, inflexível e perfeccionista</p>
+
+  <p><strong>Status:</strong></p>
+  <ul>
+    <li>Cérebros: d12</li>
+    <li>Músculo: d10</li>
+    <li>Luta: d8</li>
+    <li>Fuga: d6</li>
+    <li>Charme: d4</li>
+    <li>Garra: d20</li>
+  </ul>
+
+  <p><strong>Habilidades:</strong></p>
+  <ul>
+    <li>Olhos do Campo de Batalha (Classe)</li>
+    <li>Disciplina de Ferro (Classe)</li>
+    <li>Fogo de Supressão (Geral Nível 1)</li>
+    <li>Golpe Final (Geral Nível 5)</li>
+  </ul>
+
+  <p><strong>Tecnologia de 2377:</strong></p>
+  <p>Implante de Dreno Energético (permite 1 turno extra antes de cair inconsciente)</p>
+</div>
+
+<!-- ===================== SCRIPT PARA GERAR FICHA E BAIXAR ===================== -->
+<script>
+function generateHTML() {
+  // Capturando dados do formulário
+  const nome = document.getElementById('nome').value || "Não Informado";
+  const idade = document.getElementById('idade').value || "Não Informado";
+  const medo = document.getElementById('medo').value || "Não Informado";
+  const motivacao = document.getElementById('motivacao').value || "Não Informado";
+  const falhas = document.getElementById('falhas').value || "Não Informado";
+
+  const cerebros = document.getElementById('cerebros').value || "N/A";
+  const musculo = document.getElementById('musculo').value || "N/A";
+  const luta = document.getElementById('luta').value || "N/A";
+  const fuga = document.getElementById('fuga').value || "N/A";
+  const charme = document.getElementById('charme').value || "N/A";
+  const garra = document.getElementById('garra').value || "N/A";
+
+  const habilidades = document.getElementById('habilidades').value || "Nenhuma habilidade listada";
+  const tecnologia = document.getElementById('tecnologia').value || "Nenhuma";
+
+  // Criando o HTML da ficha final
+  const fichaHTML = `
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Ficha de Personagem - ${nome}</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif; 
+      margin: 20px;
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      color: #2F4F4F;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    ul {
+      list-style: square;
+      margin-left: 20px;
+    }
+    strong {
+      color: #2F4F4F;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Ficha de Personagem</h1>
+
+<div class="section">
+  <h2>Informações Básicas</h2>
+  <p><strong>Nome:</strong> ${nome}</p>
+  <p><strong>Idade:</strong> ${idade}</p>
+  <p><strong>Medo:</strong> ${medo}</p>
+  <p><strong>Motivação:</strong> ${motivacao}</p>
+  <p><strong>Falhas:</strong> ${falhas}</p>
+</div>
+
+<div class="section">
+  <h2>Status (Atributos)</h2>
+  <ul>
+    <li><strong>Cérebros:</strong> ${cerebros}</li>
+    <li><strong>Músculo:</strong> ${musculo}</li>
+    <li><strong>Luta:</strong> ${luta}</li>
+    <li><strong>Fuga:</strong> ${fuga}</li>
+    <li><strong>Charme:</strong> ${charme}</li>
+    <li><strong>Garra:</strong> ${garra}</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>Habilidades</h2>
+  <p>${habilidades}</p>
+</div>
+
+<div class="section">
+  <h2>Tecnologia de 2377 (Opcional)</h2>
+  <p><strong>Vantagem Oculta:</strong> ${tecnologia}</p>
+</div>
+
+</body>
+</html>
+  `;
+
+  // Função para forçar o download do arquivo HTML
+  downloadHTMLFile(nome, fichaHTML);
+}
+
+function downloadHTMLFile(nomePersonagem, conteudoHTML) {
+  // Gera o nome do arquivo dinamicamente
+  const filename = `Ficha_${nomePersonagem.replace(/\s+/g, '_')}.html`;
+
+  // Cria um blob com o conteúdo da ficha
+  const blob = new Blob([conteudoHTML], { type: 'text/html' });
+  const url = URL.createObjectURL(blob);
+
+  // Cria um link temporário para "forçar" o download
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = filename;
+
+  // Adiciona ao DOM, clica e remove em seguida
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+
+  // Libera o objeto URL
+  URL.revokeObjectURL(url);
+}
+</script>
+
+</body>
+</html>

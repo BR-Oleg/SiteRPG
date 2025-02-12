@@ -1,0 +1,672 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>RECBLAW: WWII - Manual de Sistema RPG</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2, h3, h4 {
+            color: #2F4F4F;
+        }
+        table {
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        table, th, td {
+            border: 1px solid #808080;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        .emoji {
+            font-weight: bold;
+            color: #333;
+        }
+        .highlight {
+            background-color: #f0f8ff;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .small {
+            font-size: 0.9em;
+            color: #555;
+        }
+        .note {
+            color: #800000;
+            font-style: italic;
+        }
+        .tech-box {
+            border: 2px dashed #ccc;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #fff8dc;
+        }
+        ul, ol {
+            margin: 0 0 1em 1em;
+        }
+    </style>
+</head>
+<body>
+
+<h1>RECBLAW: WWII - Manual de Sistema RPG</h1>
+
+<div class="section">
+    <h2>1. Introdução</h2>
+    <p>
+        Este documento reúne as regras e mecânicas principais de um RPG ambientado na 
+        <strong>Segunda Guerra Mundial</strong>, com um toque de <strong>ficção científica</strong>: 
+        os personagens são viajantes do futuro (ano <strong>2377</strong>) que retornaram ao passado 
+        e assumiram a pele de soldados americanos para interferir (ou garantir) o curso da História.
+    </p>
+    <p>
+        Você encontrará instruções de criação de personagem, atributos, regras de progressão, 
+        habilidades gerais, classes, habilidades de classe e um apêndice com a <span class="emoji">&#9889;</span> 
+        <strong>Tecnologia de 2377</strong>, um recurso opcional para adicionar mais sabor futurista ao cenário.
+    </p>
+</div>
+
+<!-- CRIAÇÃO DE PERSONAGEM -->
+<div class="section">
+    <h2>2. Criação de Personagem</h2>
+    <h3>Informações Básicas</h3>
+    <ul>
+        <li><strong>Nome:</strong> Identificação do seu personagem.</li>
+        <li><strong>Idade:</strong> Geralmente de 18 a 40 anos, mas pode variar.</li>
+        <li><strong>Medo:</strong> O que aterroriza seu personagem em meio à guerra?</li>
+        <li><strong>Motivação:</strong> O que o faz continuar lutando?</li>
+        <li><strong>Falhas:</strong> Traços negativos que podem gerar conflitos.</li>
+    </ul>
+</div>
+
+<!-- STATUS -->
+<div class="section">
+    <h2>3. Status do Personagem</h2>
+    <p>
+        Cada personagem possui 6 atributos principais. Cada atributo é representado por um dado específico, 
+        conforme o nível de habilidade do personagem. Quanto maior o dado, melhor o desempenho.
+    </p>
+
+    <table>
+        <tr>
+            <th>Atributo</th>
+            <th>Descrição</th>
+        </tr>
+        <tr>
+            <td><strong>Cérebros</strong></td>
+            <td>Determina inteligência, capacidade de aprendizado e solução de problemas.</td>
+        </tr>
+        <tr>
+            <td><strong>Músculo</strong></td>
+            <td>Força bruta, resistência e intimidação física.</td>
+        </tr>
+        <tr>
+            <td><strong>Luta</strong></td>
+            <td>Habilidade de combate (armas e técnicas de luta).</td>
+        </tr>
+        <tr>
+            <td><strong>Fuga</strong></td>
+            <td>Velocidade e aptidão para escapar de situações críticas.</td>
+        </tr>
+        <tr>
+            <td><strong>Charme</strong></td>
+            <td>Habilidade social, persuasão e leitura de emoções.</td>
+        </tr>
+        <tr>
+            <td><strong>Garra</strong></td>
+            <td>Determinação e resistência emocional/física.</td>
+        </tr>
+    </table>
+
+    <p><strong>Tabela de Dados e Níveis:</strong></p>
+    <table>
+        <tr>
+            <th>Nível de Habilidade</th>
+            <th>Dado</th>
+            <th>Descrição</th>
+        </tr>
+        <tr>
+            <td>Soberbo</td>
+            <td>d20</td>
+            <td>Visivelmente excepcional.</td>
+        </tr>
+        <tr>
+            <td>Impressionante</td>
+            <td>d12</td>
+            <td>Muito bom, reconhecido por conhecidos.</td>
+        </tr>
+        <tr>
+            <td>Acima da Média</td>
+            <td>d10</td>
+            <td>Bom, mas não impressionante.</td>
+        </tr>
+        <tr>
+            <td>Abaixo da Média</td>
+            <td>d8</td>
+            <td>Um pouco pior do que a média.</td>
+        </tr>
+        <tr>
+            <td>Ruim</td>
+            <td>d6</td>
+            <td>Notadamente fraco, mas não óbvio para estranhos.</td>
+        </tr>
+        <tr>
+            <td>Terrível</td>
+            <td>d4</td>
+            <td>Claramente uma fraqueza perceptível.</td>
+        </tr>
+    </table>
+</div>
+
+<!-- TESTES, DIFICULDADES E RESULTADOS -->
+<div class="section">
+    <h2>4. Testes, Dificuldades e Resultados</h2>
+    <p>
+        Quando um personagem tenta uma ação desafiadora, o Mestre define uma <strong>Dificuldade</strong>. 
+        O jogador rola o dado referente ao atributo apropriado e soma/compara com a dificuldade.
+    </p>
+
+    <h3>Tabela de Sucesso e Falha</h3>
+    <table>
+        <tr>
+            <th>Resultado</th>
+            <th>Consequência</th>
+        </tr>
+        <tr>
+            <td>+10 ou mais</td>
+            <td>Sucesso espetacular, efeitos adicionais positivos são possíveis.</td>
+        </tr>
+        <tr>
+            <td>+5 a +9</td>
+            <td>Sucesso impressionante, pode ter benefícios extras.</td>
+        </tr>
+        <tr>
+            <td>+1 a +4</td>
+            <td>Sucesso normal, sem efeitos extraordinários.</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>Sucesso mínimo (raspando).</td>
+        </tr>
+        <tr>
+            <td>-1 a -4</td>
+            <td>Falha leve, consequências pequenas e imediatas.</td>
+        </tr>
+        <tr>
+            <td>-5 a -9</td>
+            <td>Falha ruim, traz dificuldades mas ainda contornáveis.</td>
+        </tr>
+        <tr>
+            <td>-10 a -14</td>
+            <td>Falha grave, pode alterar significativamente a situação da cena.</td>
+        </tr>
+        <tr>
+            <td>-15 ou menos</td>
+            <td>Falha catastrófica, consequências de longo prazo.</td>
+        </tr>
+    </table>
+
+    <h3>Escala de Dificuldades</h3>
+    <table>
+        <tr>
+            <th>Dificuldade</th>
+            <th>Descrição / Exemplo</th>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>Quase impossível (levantar um carro, resolver problema inédito instantaneamente).</td>
+        </tr>
+        <tr>
+            <td>17-19</td>
+            <td>Extremamente difícil (convencer um policial a ignorar crime claro).</td>
+        </tr>
+        <tr>
+            <td>13-16</td>
+            <td>Muito difícil (resistir a um interrogatório, hackear sistemas avançados).</td>
+        </tr>
+        <tr>
+            <td>10-12</td>
+            <td>Desafio notável (arrombar porta reforçada).</td>
+        </tr>
+        <tr>
+            <td>7-9</td>
+            <td>Desafio razoável (enganar um diretor, fazer entrega rápida).</td>
+        </tr>
+        <tr>
+            <td>3-6</td>
+            <td>Relativamente fácil (manter a calma sob pressão moderada).</td>
+        </tr>
+        <tr>
+            <td>1-2</td>
+            <td>Quase automático (levantar peso leve, recitar tabuada).</td>
+        </tr>
+    </table>
+</div>
+
+<!-- SISTEMA DE COMBATE -->
+<div class="section">
+    <h2>5. Sistema de Combate</h2>
+    <p>
+        Em combate, comparam-se as rolagens do atacante e do defensor. A diferença entre elas determina o resultado narrativo.
+    </p>
+
+    <table>
+        <tr>
+            <th>Diferença de Rolagem</th>
+            <th>Controle Narrativo</th>
+            <th>Efeito</th>
+        </tr>
+        <tr>
+            <td>Defensor &ge; Atacante</td>
+            <td>Defensor narra</td>
+            <td>O ataque não causa dano; o defensor se protege ou escapa ileso.</td>
+        </tr>
+        <tr>
+            <td>Atacante +1 a +3</td>
+            <td>Atacante narra, defensor descreve mitigação</td>
+            <td>Ferimento leve, sem consequências graves.</td>
+        </tr>
+        <tr>
+            <td>Atacante +4 a +6</td>
+            <td>Atacante narra, defensor tenta reagir</td>
+            <td>Ferimento moderado, precisa de atendimento médico.</td>
+        </tr>
+        <tr>
+            <td>Atacante +7 a +9</td>
+            <td>Atacante narra com veto parcial</td>
+            <td>Ferimento grave, risco de morte sem cuidado imediato.</td>
+        </tr>
+        <tr>
+            <td>Atacante +10 ou mais</td>
+            <td>Atacante tem controle total</td>
+            <td>Defensor morto ou muito próximo disso.</td>
+        </tr>
+    </table>
+</div>
+
+<!-- REGRAS DE PROGRESSÃO -->
+<div class="section">
+    <h2>6. Regras de Progressão</h2>
+    <p>
+        Ao subir de nível, cada personagem recebe <em>pontos de evolução</em> que podem ser gastos para adquirir 
+        <strong>Habilidades Gerais</strong> ou aprimorar atributos (respeitando a regra de não repetir dados, 
+        se estiver ativa em sua mesa).
+    </p>
+    <p>
+        <strong>Habilidades Gerais:</strong> existe uma lista de habilidades (divididas em 5 níveis). Cada nível de personagem, 
+        o jogador pode pegar uma quantidade de habilidades gerais seguindo a <em>tabela de progressão</em> (sugerida abaixo) 
+        ou conforme o Mestre preferir.
+    </p>
+    <p>
+        <strong>Habilidades de Classe:</strong> a cada nível, o personagem pega <strong>1 habilidade</strong> 
+        da sua classe, observando o nível a que pertence a habilidade e eventuais pré-requisitos.
+    </p>
+
+    <h3>Tabela de Aquisição de Habilidades Gerais (Exemplo)</h3>
+    <p>
+        <em>Esta é uma sugestão de quantas habilidades gerais um personagem pode adquirir por nível. 
+        O Mestre pode ajustar conforme o ritmo da campanha.</em>
+    </p>
+    <ul>
+        <li><strong>Nível 1:</strong> 2 habilidades de nível 1.</li>
+        <li><strong>Nível 2:</strong> 1 habilidade de nível 1 + 2 habilidades de nível 2.</li>
+        <li><strong>Nível 3:</strong> 1 habilidade de nível 2 + 2 habilidades de nível 3.</li>
+        <li><strong>Nível 4:</strong> 1 habilidade de nível 3 + 2 habilidades de nível 4.</li>
+        <li><strong>Nível 5:</strong> 1 habilidade de nível 4 + 2 habilidades de nível 5.</li>
+    </ul>
+</div>
+
+<!-- HABILIDADES GERAIS -->
+<div class="section">
+    <h2>7. Habilidades Gerais</h2>
+    <p>
+        As <strong>Habilidades Gerais</strong> estão disponíveis para todos os personagens, independentemente de classe. 
+        Elas são divididas em <strong>5 níveis</strong>. O jogador pode escolher livremente as habilidades do nível correspondente 
+        ao seu personagem (ou níveis inferiores ainda não pegues) de acordo com a tabela de progressão acima.
+    </p>
+
+    <h3>Nível 1</h3>
+    <ul>
+        <li><strong>Fogo de Supressão:</strong> Se acertar um inimigo com arma de fogo, ele sofre -2 na próxima ação.</li>
+        <li><strong>Tiro Ajustado:</strong> Ao errar um disparo, role 1d6; em 5 ou 6, o tiro o atinge de raspão (metade do dano normal).</li>
+        <li><strong>Sobrevivente Nato:</strong> A primeira vez que você sofre dano no combate, role 1d8; em 6+, reduz o dano pela metade.</li>
+        <li><strong>Abaixar-se!:</strong> Se gastar seu turno buscando cobertura, ganha +2 na próxima defesa.</li>
+        <li><strong>Formação Tática:</strong> Se estiver ao lado de um aliado, ambos ganham +1 em defesa.</li>
+        <li><strong>Recarregar Rápido:</strong> Uma vez por combate, pode recarregar sem gastar ação.</li>
+    </ul>
+
+    <h3>Nível 2</h3>
+    <ul>
+        <li><strong>Instinto de Sobrevivência:</strong> Se for atacado em emboscada, recebe +2 em defesa no primeiro ataque sofrido.</li>
+        <li><strong>Tiro Letal:</strong> Se rolar 10+ no ataque à distância, causa +1d4 de dano extra.</li>
+        <li><strong>Posição Estratégica:</strong> Se analisar o terreno antes de lutar (1 turno), ganha +2 em Cérebros para táticas.</li>
+        <li><strong>Ataque Rápido (Geral):</strong> Se derrubar um inimigo, pode atacar novamente no mesmo turno (só uma vez por combate).</li>
+        <li><strong>Estancar o Sangue:</strong> Pode gastar 1 turno para estabilizar um aliado inconsciente, impedindo morte imediata.</li>
+        <li><strong>Foco Determinado:</strong> Use 1 turno para concentrar-se; no próximo teste de Luta ou Charme, role 2 dados e escolha o melhor.</li>
+    </ul>
+
+    <h3>Nível 3</h3>
+    <ul>
+        <li><strong>Olhos da Guerra:</strong> Uma vez por combate, pode refazer uma rolagem de ataque ou defesa.</li>
+        <li><strong>Precisão Cirúrgica:</strong> Se rolar 15+ no ataque, ignora metade da defesa do alvo.</li>
+        <li><strong>Combate Brutal:</strong> Se usar arma corpo a corpo, causa +2 de dano fixo.</li>
+        <li><strong>Ataque Coordenado:</strong> Se você e um aliado atacarem o mesmo alvo, o inimigo sofre -2 na defesa.</li>
+        <li><strong>Adrenalina Pura:</strong> Recebe +2 em Músculo ou Fuga por 2 turnos (1 uso por combate).</li>
+        <li><strong>Pensamento Rápido:</strong> Pode usar Cérebros no lugar de Fuga em testes de iniciativa ou emboscada.</li>
+    </ul>
+
+    <h3>Nível 4</h3>
+    <ul>
+        <li><strong>Contra-Ataque Instantâneo:</strong> Se um inimigo errar um ataque corpo a corpo contra você, 
+            pode atacar de volta imediatamente.</li>
+        <li><strong>Vontade Inquebrável:</strong> Uma vez por sessão, se cair a 0 de vida, rola 1d6; em 4+, mantém 1 de vida.</li>
+        <li><strong>Especialista em Armas Pesadas:</strong> Se usar metralhadoras fixas ou lança-foguetes, 
+            recebe +2 no ataque e +1 dado de dano.</li>
+        <li><strong>Plano de Fuga:</strong> Ao escolher fugir de um combate, ganha +3 em Fuga e aliados recebem +1.</li>
+        <li><strong>Mira Fria:</strong> Não sofre penalidade por atirar em alvos parcialmente cobertos.</li>
+    </ul>
+
+    <h3>Nível 5</h3>
+    <ul>
+        <li><strong>Golpe Final:</strong> Se rolar 18+ num ataque, elimina o alvo instantaneamente (ou causa dano crítico em chefes).</li>
+        <li><strong>Ataque Relâmpago:</strong> Uma vez por combate, pode agir duas vezes seguidas no mesmo turno.</li>
+        <li><strong>Sorte de Herói:</strong> Uma vez por sessão, pode ignorar completamente uma falha catastrófica (até -15).</li>
+        <li><strong>Postura Lendária:</strong> Você inspira aliados, concedendo +2 em todas as rolagens para o grupo por 1 turno.</li>
+        <li><strong>Destruição Máxima:</strong> Se causar dano a um alvo, pode rolar 1d6 adicional e somar ao dano total.</li>
+    </ul>
+</div>
+
+<!-- CLASSES COM NÍVEIS E HABILIDADES -->
+<div class="section">
+    <h2>8. Habilidades de Classe por Nível</h2>
+    <p>
+        Além das habilidades gerais, cada classe oferece <strong>habilidades exclusivas</strong> 
+        divididas em 5 níveis. A cada nível de personagem, você pode escolher <strong>1 habilidade de classe</strong> 
+        (respeitando pré-requisitos). Você também pode optar por habilidades de níveis anteriores da mesma classe, 
+        se ainda não as tiver escolhido.
+    </p>
+
+    <!-- 8.1 SOLDADO DE LINHA DE FRENTE -->
+    <h3>8.1 Soldado de Linha de Frente (Infantaria)</h3>
+    <p><em>"Sempre à frente, enfrentando o perigo de frente."</em></p>
+    <ul>
+        <li><strong>Nível 1</strong>
+            <ul>
+                <li><strong>Avançar!</strong> – Mover-se em linha reta não gasta ação no primeiro movimento do turno.</li>
+                <li><strong>Força de Vontade</strong> – Uma vez por combate, pode ignorar as penalidades de ferimentos por 1 turno.</li>
+            </ul>
+        </li>
+        <li><strong>Nível 2</strong>
+            <ul>
+                <li><strong>Instinto de Combate</strong> – +2 em defesa ao lutar corpo a corpo.</li>
+                <li><strong>Fogo de Cobertura</strong> – Se um aliado próximo for atacado, você pode disparar antes do inimigo (1 vez por combate).</li>
+            </ul>
+        </li>
+        <li><strong>Nível 3</strong>
+            <ul>
+                <li><strong>Sangue no Olho</strong> – Se estiver com menos de 50% de vida, ganha +3 em ataques.</li>
+                <li><strong>Proteção Blindada</strong> – Se estiver em cobertura, reduz qualquer dano sofrido em 2 pontos adicionais.</li>
+            </ul>
+        </li>
+        <li><strong>Nível 4</strong>
+            <ul>
+                <li><strong>Resistência Inquebrável</strong> (<em>Requer Força de Vontade</em>) – Se cair a 0 de vida, role 1d6. Em 4+, mantém 1 de vida.</li>
+                <li><strong>Arremesso Pesado</strong> – +2 ao lançar granadas ou objetos contundentes.</li>
+            </ul>
+        </li>
+        <li><strong>Nível 5</strong>
+            <ul>
+                <li><strong>Implacável</strong> (<em>Requer Resistência Inquebrável</em>) – Uma vez por sessão, pode realizar 2 ações de ataque no mesmo turno.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <!-- 8.2 COMANDANTE DE CAMPO -->
+    <h3>8.2 Comandante de Campo (Oficial)</h3>
+    <p><em>"Líder tático, estrategista e motivador da tropa."</em></p>
+    <ul>
+        <li><strong>Nível 1</strong>
+            <ul>
+                <li><strong>Comando de Ferro</strong> – Pode gastar seu turno para dar +2 para todos os aliados até seu próximo turno.</li>
+                <li><strong>Recuo Organizado</strong> – Aliados próximos ganham +2 em Fuga ao bater em retirada.</li>
+            </ul>
+        </li>
+        <li><strong>Nível 2</strong>
+            <ul>
+                <li><strong>Disciplina Militar</strong> – Sempre que der uma ordem direta, o aliado recebe +1d4 no teste.</li>
+                <li><strong>Motivação de Tropa</strong> – Uma vez por combate, todos os aliados recuperam 1d4 de vida ao ouvir seu discurso.</li>
+            </ul>
+        </li>
+        <li><strong>Nível 3</strong>
+            <ul>
+                <li><strong>Batalha Calculada</strong> – Pode gastar um turno para reduzir pela metade o dano recebido na próxima rolagem de defesa.</li>
+                <li><strong>Inspiração Heróica</strong> – Se você derrubar um inimigo, todos os aliados ganham +1 em testes de ataque por 1 turno.</li>
+            </ul>
+        </li>
+        <li><strong>Nível 4</strong>
+            <ul>
+                <li><strong>Tática Avançada</strong> – Uma vez por sessão, preveja o movimento inimigo e conceda +2 em todas as defesas dos aliados por 1 turno.</li>
+                <li><strong>Sacrifício Coordenado</strong> – Se um aliado for atingido, você pode sofrer metade do dano no lugar dele.</li>
+            </ul>
+        </li>
+        <li><strong>Nível 5</strong>
+            <ul>
+                <li><strong>Ordem Suprema</strong> (<em>Requer Tática Avançada</em>) – Todos os aliados ganham +2 em todas as rolagens por 3 turnos (1 uso por sessão).</li>
+            </ul>
+        </li>
+    </ul>
+
+    <!-- 8.3 BATEDOR -->
+    <h3>8.3 Batedor (Explorador)</h3>
+    <p><em>"Rápido, furtivo e letal. Perfeito para emboscadas."</em></p>
+    <ul>
+        <li><strong>Nível 1</strong>
+            <ul>
+                <li><strong>Passo Silencioso</strong> – +3 em Fuga ao se mover furtivamente.</li>
+                <li><strong>Visão de Longe</strong> – +2 em Cérebros para identificar ameaças ou rotas de infiltração a longa distância.</li>
+            </ul>
+        </li>
+        <li><strong>Nível 2</strong>
+            <ul>
+                <li><strong>Ataque Rápido (Classe)</strong> – Se atacar primeiro no combate, o inimigo sofre -2 na defesa.</li>
+                <li><strong>Desaparecer na Multidão</strong> – Em zonas urbanas, +2 em Fuga e testes de se misturar ao público.</li>
+            </ul>
+        </li>
+        <li><strong>Nível 3</strong>
+            <ul>
+                <li><strong>Esquiva Relâmpago</strong> – Uma vez por combate, pode ignorar completamente um ataque.</li>
+                <li><strong>Sabotador</strong> – +4 em testes para plantar explosivos ou sabotar veículos/maquinário.</li>
+            </ul>
+        </li>
+        <li><strong>Nível 4</strong>
+            <ul>
+                <li><strong>Movimento Fantasma</strong> – Se gastar 1 turno inteiro sem atacar, torna-se quase indetectável (+3 Fuga e defesa por 1 turno).</li>
+                <li><strong>Olhos de Águia</strong> – Reduz em -2 a dificuldade de qualquer teste para localizar objetos ou pessoas distantes.</li>
+            </ul>
+        </li>
+        <li><strong>Nível 5</strong>
+            <ul>
+                <li><strong>Mestre da Furtividade</strong> (<em>Requer Movimento Fantasma</em>) – Recebe +2 permanente em Fuga e ataques de emboscada causam dano dobrado.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <!-- 8.4 MÉDICO DE GUERRA -->
+    <h3>8.4 Médico de Guerra</h3>
+    <p><em>"Mantém a tropa viva sob fogo pesado."</em></p>
+    <ul>
+        <li><strong>Nível 1</strong>
+            <ul>
+                <li><strong>Primeiros Socorros</strong> – Cura 1d6 de vida de um aliado (1 vez por combate).</li>
+                <li><strong>Resistência à Dor</strong> – Se sofrer dano, recebe apenas metade das penalidades de ferimentos.</li>
+            </ul>
+        </li>
+        <li><strong>Nível 2</strong>
+            <ul>
+                <li><strong>Adrenalina de Combate</strong> – Um aliado ignora penalidades de ferimentos por 1 turno.</li>
+                <li><strong>Equipamento Médico</strong> – Pode estabilizar um aliado ferido <em>sem rolagem</em> (1 vez por sessão).</li>
+            </ul>
+        </li>
+        <li><strong>Nível 3</strong>
+            <ul>
+                <li><strong>Cirurgião de Campo</strong> – Ao tratar alguém à beira da morte, impede a morte automaticamente.</li>
+                <li><strong>Procedimento de Emergência</strong> – Um aliado incapacitado pode agir por +1 turno antes de desmaiar.</li>
+            </ul>
+        </li>
+        <li><strong>Nível 4</strong>
+            <ul>
+                <li><strong>Doping Militar</strong> – Injeta estimulantes que concedem +2 em qualquer atributo por 3 turnos.</li>
+                <li><strong>Regeneração Acelerada</strong> – Um aliado sob seus cuidados recupera 1d4 de vida por turno durante 3 turnos.</li>
+            </ul>
+        </li>
+        <li><strong>Nível 5</strong>
+            <ul>
+                <li><strong>Última Chance</strong> (<em>Requer Cirurgião de Campo</em>) – Se um aliado cair a 0 de vida, pode trazê-lo de volta com 1 ponto de vida (1 uso por sessão).</li>
+            </ul>
+        </li>
+    </ul>
+
+    <!-- 8.5 FRANCO-ATIRADOR -->
+    <h3>8.5 Franco-Atirador (Atirador de Elite)</h3>
+    <p><em>"Abate inimigos antes que percebam sua presença."</em></p>
+    <ul>
+        <li><strong>Nível 1</strong>
+            <ul>
+                <li><strong>Respiração Controlada</strong> – Se gastar 1 turno mirando, ganha +5 no próximo disparo.</li>
+                <li><strong>Perícia com Rifles</strong> – +2 em testes de ataque usando rifles de longo alcance.</li>
+            </ul>
+        </li>
+        <li><strong>Nível 2</strong>
+            <ul>
+                <li><strong>Mira Estável</strong> – Pode se mover e ainda manter apenas -1 no ataque à distância.</li>
+                <li><strong>Alvo Predileto</strong> – Se atacar o mesmo alvo consecutivamente, +1 no segundo ataque e +2 no terceiro.</li>
+            </ul>
+        </li>
+        <li><strong>Nível 3</strong>
+            <ul>
+                <li><strong>Ponto Fraco</strong> – Se rolar 15+ em Luta (arma de fogo), dobra o dano.</li>
+                <li><strong>Posição Elevada</strong> – Se estiver em um local mais alto, +2 no ataque.</li>
+            </ul>
+        </li>
+        <li><strong>Nível 4</strong>
+            <ul>
+                <li><strong>Disparo Rápido</strong> – Se eliminar um inimigo, pode atacar outro imediatamente (1 vez por rodada).</li>
+                <li><strong>Camuflagem Avançada</strong> – Se ficar parado por 1 turno, ganha +3 em Fuga até atacar.</li>
+            </ul>
+        </li>
+        <li><strong>Nível 5</strong>
+            <ul>
+                <li><strong>Bala Certeira</strong> (<em>Requer Ponto Fraco</em>) – Se tirar 18+ no ataque, ignora completamente a armadura do alvo.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <!-- 8.6 DEMOLIDOR -->
+    <h3>8.6 Demolidor (Engenheiro Explosivista)</h3>
+    <p><em>"Especialista em destruição. Onde passa, nada fica de pé."</em></p>
+    <ul>
+        <li><strong>Nível 1</strong>
+            <ul>
+                <li><strong>Granadeiro Especialista</strong> – Pode lançar granadas duas casas além do normal.</li>
+                <li><strong>Explosão Controlada</strong> – Você e aliados sofrem -2 de dano de suas próprias explosões.</li>
+            </ul>
+        </li>
+        <li><strong>Nível 2</strong>
+            <ul>
+                <li><strong>Mecânico de Guerra</strong> – Conserta armas e veículos danificados sem teste (1 vez por sessão).</li>
+                <li><strong>Desarmamento Básico</strong> – Pode desmontar armadilhas simples sem precisar de rolagem.</li>
+            </ul>
+        </li>
+        <li><strong>Nível 3</strong>
+            <ul>
+                <li><strong>Tremor de Guerra</strong> – Se explodir algo próximo a inimigos, eles sofrem -2 em Fuga por 2 turnos.</li>
+                <li><strong>Carga Direcionada</strong> – Ao plantar explosivos com precisão, adiciona +2d4 de dano.</li>
+            </ul>
+        </li>
+        <li><strong>Nível 4</strong>
+            <ul>
+                <li><strong>Explosão Perfeita</strong> – Se rolar 15+ ao usar explosivos, dobra o dano causado.</li>
+                <li><strong>Granada Experimental</strong> – Pode criar granadas com efeitos personalizados (incendiária, fumaça, atordoante).</li>
+            </ul>
+        </li>
+        <li><strong>Nível 5</strong>
+            <ul>
+                <li><strong>Mestre do Caos</strong> (<em>Requer Explosão Perfeita</em>) – Se explodir algo grande, ganha +2 em todas as ações por 2 turnos (1 uso por sessão).</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<!-- TECNOLOGIA DE 2377 -->
+<div class="section">
+    <h2>9. Guia: Tecnologia de 2377 (Opcional)</h2>
+    <div class="tech-box">
+        <p>
+            <span class="emoji">&#9889;</span> <strong>Vantagem Oculta</strong><br/>
+            Cada jogador (ou grupo) pode ter <strong>um</strong> item ou habilidade vinda do futuro (ano 2377), 
+            usada de forma limitada e secreta. Esses recursos explicam por que os aliados podem vencer Hitler com mais facilidade, 
+            mas não quebram a imersão da guerra.
+        </p>
+    </div>
+
+    <h3>Como Funciona?</h3>
+    <ul>
+        <li>Apenas <strong>1</strong> opção por personagem (item, passiva ou ativa).</li>
+        <li>Uso limitado (uma vez por missão/combate), pois não há como recarregar ou consertar facilmente em 1940.</li>
+        <li>Se descoberta, pode mudar o rumo da guerra e gerar conflitos com autoridades militares da época.</li>
+    </ul>
+
+    <h3>Opções Disponíveis</h3>
+    <ol>
+        <li><strong>Sistema de Mira Neural</strong> (Item Futurista)<br/>
+            <em>Efeito:</em> Uma vez por missão, garante <strong>acerto crítico automático</strong>. Depois, sofre penalidade 
+            (-2 em Cérebros e Luta) por “sobrecarga visual” temporária.
+        </li>
+        <br/>
+        <li><strong>Sintonia Neural Temporal</strong> (Habilidade Passiva)<br/>
+            <em>Efeito:</em> Duas vezes por sessão, pode ter <strong>vislumbres do futuro próximo</strong>. 
+            Não mostra respostas exatas, mas flashes que podem evitar armadilhas ou orientar decisões.
+        </li>
+        <br/>
+        <li><strong>Implante de Dreno Energético</strong> (Habilidade Ativa)<br/>
+            <em>Efeito:</em> Uma vez por combate, ao cair em 0 de vida, permanece <strong>consciente por 1 turno extra</strong>. 
+            Se não receber ajuda até o final desse turno, morre.
+        </li>
+        <br/>
+        <li><strong>Baioneta Vibracional XK-9</strong> (Arma Secreta)<br/>
+            <em>Efeito:</em> Uma vez por sessão, ignora completamente a defesa de um alvo (ou corta materiais resistentes). 
+            Fica inoperante por 24h após o uso.
+        </li>
+        <br/>
+        <li><strong>Modo Fantasma</strong> (Ocultação Temporal)<br/>
+            <em>Efeito:</em> Uma vez por missão, fica <strong>invisível por 10 segundos</strong>. Não pode atacar enquanto invisível; 
+            ruídos ainda podem denunciar sua posição.
+        </li>
+    </ol>
+</div>
+
+<!-- CONSIDERAÇÕES FINAIS -->
+<div class="section">
+    <h2>10. Conclusão e Considerações Finais</h2>
+    <p>
+        Este sistema foi criado para proporcionar uma experiência de <strong>Segunda Guerra Mundial</strong> 
+        com a possibilidade de um <strong>toque futurista</strong>. Cada regra pode ser ajustada pelo Mestre 
+        para se adequar melhor ao tom e ao equilíbrio desejados. Use a criatividade para criar narrativas 
+        envolventes e aproveitar ao máximo as mecânicas apresentadas!
+    </p>
+    <p class="small"><em>Boa sorte e divirta-se nas batalhas!</em></p>
+</div>
+
+<div class="button-area">
+    <a class="btn-link" href="ficha.html" target="_blank">
+        Criar sua Ficha Agora
+    </a>
+</div>
+
+</body>
+</html>
